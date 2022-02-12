@@ -12,6 +12,8 @@ const products = useProducts()
 onMounted(() => {
     console.log("onMounted");
     products.fetchProducts()
+
+    console.log('isDev', import.meta.env.DEV)
 });
 </script>
 

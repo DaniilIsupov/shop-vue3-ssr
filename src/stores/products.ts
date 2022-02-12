@@ -22,9 +22,10 @@ export const useProducts = defineStore('products', {
     },
     actions: {
         async fetchProducts() {
-            const products = (
-                await axios.get<IProduct[]>('https://fakestoreapi.com/products')
-            ).data;
+            const response = await axios.get<IProduct[]>(
+                'https://fakestoreapi.com/products'
+            );
+            const products = response.data;
 
             this.products = products;
             console.log(`received ${products.length} products`);
