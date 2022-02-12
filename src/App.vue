@@ -5,16 +5,18 @@ import { onMounted } from "vue";
 
 import HelloWorld from "./components/HelloWorld.vue";
 
+import { useProducts } from "./stores/products";
+
+const products = useProducts()
+
 onMounted(() => {
     console.log("onMounted");
+    products.fetchProducts()
 });
 </script>
 
 <template>
-    <img
-        alt="Vue logo"
-        src="./assets/logo.png"
-    />
+    <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 
