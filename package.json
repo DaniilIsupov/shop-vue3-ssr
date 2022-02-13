@@ -5,7 +5,8 @@
         "dev": "vite",
         "build": "vue-tsc --noEmit && vite build",
         "preview": "vite preview",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "eslint-fix": "eslint --fix --ext .js,.ts,.vue src"
     },
     "dependencies": {
         "@vitejs/plugin-legacy": "^1.7.1",
@@ -16,8 +17,15 @@
     "devDependencies": {
         "@commitlint/cli": "^16.1.0",
         "@commitlint/config-conventional": "^16.0.0",
+        "@typescript-eslint/eslint-plugin": "^5.11.0",
+        "@typescript-eslint/parser": "^5.11.0",
         "@vitejs/plugin-vue": "^2.2.0",
+        "eslint": "^8.9.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-vue": "^8.4.1",
         "husky": "^7.0.4",
+        "prettier": "^2.5.1",
         "typescript": "^4.5.5",
         "vite": "^2.8.1",
         "vue-tsc": "^0.31.3"
